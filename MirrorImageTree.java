@@ -2,11 +2,9 @@
 public class MirrorImageTree {
 
 	public static Node mirror(Node root)
-	{
-		
+	{		
 		if(root!=null)
-		{
-			
+		{			
 				 Node temp=root.right;
 				 root.right=root.left;
 				 root.left=temp;
@@ -14,8 +12,7 @@ public class MirrorImageTree {
 				 mirror(root.right);
 				 return root;
 		}
-		return null;
-		
+		return null;	
 	}
 	
 	public static void printInorder(Node root)
@@ -37,7 +34,7 @@ public class MirrorImageTree {
 		Node E=new Node(12,
 				new Node(11,new Node(9, new Node(8), new Node(342)),new Node(16)),
 				new Node(114, new Node(111), new Node(1234)));
-		printInorder(B);
+		printInorder(B);																		
 		mirror(B);
 		System.out.println();
 		printInorder(B);
@@ -49,5 +46,5 @@ public class MirrorImageTree {
 		mirror(D);
 		mirror(E);
 
-	}
+	}					
 }

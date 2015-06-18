@@ -31,7 +31,5 @@ public class PalindromeSimple {
 		System.out.println(checkPalindrome("madam"));
 		System.out.println(checkPalindrome("hello"));
 		System.out.println(checkPalindrome("twiiwt"));
-
-
 	}
 }

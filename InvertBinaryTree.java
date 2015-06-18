@@ -21,7 +21,6 @@ public static void printInorder(Node root)
 	printInorder(root.left);
 	System.out.print(root.data+" ");
 	printInorder(root.right);
-
 }
 
 public static void main(String args[])

@@ -1,3 +1,5 @@
+package BinaryTree;
+
 
 public class CountNodesBinaryTree {
 	 public static int countNodes(Node root) {

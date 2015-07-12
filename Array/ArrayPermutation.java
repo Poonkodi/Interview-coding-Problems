@@ -1,5 +1,4 @@
 package Array;
-import java.util.Arrays;
 
 
 public class ArrayPermutation {
@@ -21,6 +20,7 @@ public class ArrayPermutation {
 		}
 	}
 
+
 	public static void main(String args[])
 	{
 		int b[]={1,2,3};
@@ -29,6 +29,7 @@ public class ArrayPermutation {
 		int d[]={1,2};
 		ArrayPermutation ap=new ArrayPermutation();
 		ap.permuteArray(b, new int[b.length]);
+		ap.permuteArray(b);
 		System.out.println();
 	}
 }

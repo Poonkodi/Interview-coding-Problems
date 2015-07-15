@@ -4,7 +4,26 @@ public class Node {
 	int data;
 	Node left;
 	Node right;
-
+	Node parent;
+	
+	public void AddLeft(Node l) {
+		this.left = l;
+		this.left.parent = this;
+	}
+	
+	public void AddRight(Node r) {
+		this.right = r;
+		this.right.parent = this;
+	}
+	
+	public void AddChildren(Node l, Node r) {
+		AddLeft(l);
+		AddRight(r);
+	}
+//	public String toString() {
+//		String outp = "[" + this.left + "," + this.right + " ^" + this.parent + "]";
+//		return outp;
+//	}
 	Node(int data,Node left,Node right)
 	{
 		this.data=data;
@@ -37,5 +56,6 @@ public class Node {
 		System.out.println(findNode(B,new Node(100)));
 
 	}
+
 }
 

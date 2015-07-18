@@ -5,31 +5,31 @@ public class DeleteNodesLL {
 	/*
 	 * Delete alternate nodes in a LinkedList
 	 */
-	public static void deleteNode(LLNode node)
+	public static void deleteNode(ListNode node)
 	{
-		LLNode head=node;
+		ListNode head=node;
 		while(node!=null)
 		{
 			node.next=node.next.next;
 			node=node.next;
 		}
 	}
-	public static void printLLNode(LLNode node)
+	public static void printListNode(ListNode node)
 	{
 		while(node!=null)
 		{
-			System.out.print(node.data+"--");
+			System.out.print(node.val+"--");
 			node=node.next;
 		}
 		System.out.println();
 	}
 	public static void main(String args[])
 	{
-		LLNode LL=new LLNode(1,new LLNode(2,
-				new LLNode(3,new LLNode(4,
-						new LLNode(5,new LLNode(6,null))))));
-		printLLNode(LL);
+		ListNode LL=new ListNode(1,new ListNode(2,
+				new ListNode(3,new ListNode(4,
+						new ListNode(5,new ListNode(6,null))))));
+		printListNode(LL);
 		deleteNode(LL);
-		printLLNode(LL);
+		printListNode(LL);
 	}
 }

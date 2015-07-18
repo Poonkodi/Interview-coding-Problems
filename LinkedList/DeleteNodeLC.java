@@ -1,11 +1,11 @@
 package LinkedList;
 
 public class DeleteNodeLC {
-	    public void deleteNode(LLNode node) {
-	        LLNode prev=null;
+	    public void deleteNode(ListNode node) {
+	        ListNode prev=null;
 	        while(node.next!=null)
 	        {
-	            node.data=node.next.data;
+	            node.val=node.next.val;
 	            prev=node;
 	            node=node.next;
 	        }

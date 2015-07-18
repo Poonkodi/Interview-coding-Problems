@@ -1,9 +1,9 @@
-package BinaryTree;
+package LinkedList;
 
 public class Node {
-	public int data;
-	public Node left;
-	public Node right;
+	int data;
+	Node left;
+	Node right;
 	Node parent;
 	
 	public void AddLeft(Node l) {
@@ -24,14 +24,14 @@ public class Node {
 //		String outp = "[" + this.left + "," + this.right + " ^" + this.parent + "]";
 //		return outp;
 //	}
-	public Node(int data,Node left,Node right)
+	Node(int data,Node left,Node right)
 	{
 		this.data=data;
 		this.left=left;
 		this.right=right;
 	}
 	
-	public Node(int data)
+	Node(int data)
 	{
 		this.data=data;
 	}

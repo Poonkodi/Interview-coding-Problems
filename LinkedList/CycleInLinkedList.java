@@ -7,9 +7,9 @@ public class CycleInLinkedList {
 	 * @return true - if loop exists
 	 * @return fals - if loop doesnt exist
 	 */
-	public static boolean findCycle(LLNode node)
+	public static boolean findCycle(ListNode node)
 	{
-		LLNode ptr1=node,ptr2=node;
+		ListNode ptr1=node,ptr2=node;
 		while(ptr1!=null &&ptr2!=null)
 		{
 			ptr1=ptr1.next;
@@ -22,9 +22,9 @@ public class CycleInLinkedList {
 	}
 	public static void main(String args[])
 	{
-		LLNode LL=new LLNode(1,new LLNode(2,
-				new LLNode(3,new LLNode(4,
-						new LLNode(5,new LLNode(6,null))))));
+		ListNode LL=new ListNode(1,new ListNode(2,
+				new ListNode(3,new ListNode(4,
+						new ListNode(5,new ListNode(6,null))))));
 		System.out.println(findCycle(LL));
 	}
 }

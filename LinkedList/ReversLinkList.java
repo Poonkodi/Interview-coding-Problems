@@ -1,9 +1,13 @@
 package LinkedList;
 
 public class ReversLinkList {
-	public static LLNode reverseList(LLNode head)
+	public static ListNode reverseList(ListNode head)
 	{
-		LLNode current,prev,third;
+		ListNode current=null,prev=null,third=null;
+		 if(head==null)
+		        return null;
+		        else if(head.next==null)
+		        return head;
 		current=head.next;
 		third=current.next;
 		head.next=null;
@@ -12,32 +16,31 @@ public class ReversLinkList {
 		current=third;
 		while(current!=null)
 		{
-			System.out.println("processing current"+current.data);
+			System.out.println("processing current"+current.val);
 			third=current.next;
 			current.next=prev;
 			prev=current;
-			System.out.println("what is next"+current.next.data);
+			System.out.println("what is next"+current.next.val);
 			current=third;
-		}
-		
-		return prev;
-		
+		}	
+		return prev;		
 	}
-	public static void printLLNode(LLNode node)
+
+	public static void printListNode(ListNode node)
 	{
 		while(node!=null)
 		{
-			System.out.print(node.data+"--");
+			System.out.print(node.val+"--");
 			node=node.next;
 		}
 		System.out.println();
 	}
 	public static void main(String args[])
 	{
-		LLNode LL=new LLNode(1,new LLNode(2,
-				new LLNode(3,new LLNode(4,
-						new LLNode(5,new LLNode(6,null))))));
-		printLLNode(LL);
-		printLLNode(reverseList(LL));
+		ListNode LL=new ListNode(1,new ListNode(2,
+				new ListNode(3,new ListNode(4,
+						new ListNode(5,new ListNode(6,null))))));
+		printListNode(LL);
+		printListNode(reverseList(LL));
 	}
 }

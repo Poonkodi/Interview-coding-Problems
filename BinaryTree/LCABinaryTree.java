@@ -7,13 +7,13 @@ public class LCABinaryTree {
 
 	public static void printarray(ArrayList<TreeNode> n ) {
 		for (TreeNode x : n) {
-			System.out.println("[" + x.data + "]");
+			System.out.println("[" + x.val + "]");
 		}
 		System.out.println();
 	}
 
 	public static TreeNode commonAncestor(TreeNode root, TreeNode p1, TreeNode p2) {
-		System.out.println(+p1.data + "---" + p2.data);
+		System.out.println(+p1.val + "---" + p2.val);
 
 		ArrayList<TreeNode> parents1 = new ArrayList<TreeNode>();
 		ArrayList<TreeNode> parents2 = new ArrayList<TreeNode>();
@@ -34,7 +34,7 @@ public class LCABinaryTree {
 		Collections.reverse(parents2);
 
 		printarray(parents1);
-		System.out.println(parents1.get(0).data);
+		System.out.println(parents1.get(0).val);
 		printarray(parents2);
 
 //		for (TreeNode par1 : parents1) {
@@ -80,6 +80,6 @@ public class LCABinaryTree {
 		r1.AddRight(r2);
 
 		TreeNode common = commonAncestor(root, r2, r3);
-		System.out.println(common.data);
+		System.out.println(common.val);
 	}
 }

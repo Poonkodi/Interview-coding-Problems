@@ -12,7 +12,7 @@ public class Traversal {
 	{
 		if(root!=null)
 		{
-			System.out.println(root.data);
+			System.out.println(root.val);
 			preorder(root.left);
 			preorder(root.right);
 		}
@@ -23,7 +23,7 @@ public class Traversal {
 		if(root!=null)
 		{
 			inorder(root.left);
-			System.out.println(root.data);
+			System.out.println(root.val);
 			inorder(root.right);
 		}
 	}
@@ -34,7 +34,7 @@ public class Traversal {
 		{
 			inorder(root.left);
 			inorder(root.right);
-			System.out.println(root.data);
+			System.out.println(root.val);
 		}
 	}
 	

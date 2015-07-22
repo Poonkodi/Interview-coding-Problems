@@ -15,7 +15,7 @@ public class IsBSTApproach1 {
 		
 		else if(root.left!=null&&root.right!=null)
 		{
-			if(root.left.data<root.data&&root.right.data>root.data)
+			if(root.left.val<root.val&&root.right.val>root.val)
 			{
 				return (isBinarySearchTree(root.left)&&isBinarySearchTree(root.right));
 			}
@@ -24,13 +24,13 @@ public class IsBSTApproach1 {
 		}
 		else if(root.left==null&&root.right!=null)
 		{
-			if(root.right.data>root.data)
+			if(root.right.val>root.val)
 				return (isBinarySearchTree(root.right));
 		}
 		
 		else if(root.right==null&&root.left!=null)
 		{
-			if(root.left.data>root.data)
+			if(root.left.val>root.val)
 				return (isBinarySearchTree(root.left));
 		}
 		else if(root.left==null&&root.right==null)

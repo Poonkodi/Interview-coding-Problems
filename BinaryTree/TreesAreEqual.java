@@ -11,7 +11,7 @@ public class TreesAreEqual {
 			return false;
 		else if(root1==null&&root2==null)
 			return true;
-		else if(root1.data==root2.data)
+		else if(root1.val==root2.val)
 		{
 			return isEqual(root1.left,root2.left)&&isEqual(root1.right,root2.right);
 		}

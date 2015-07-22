@@ -5,26 +5,26 @@ import java.util.Collections;
 
 public class LCABinaryTree {
 
-	public static void printarray(ArrayList<Node> n ) {
-		for (Node x : n) {
+	public static void printarray(ArrayList<TreeNode> n ) {
+		for (TreeNode x : n) {
 			System.out.println("[" + x.data + "]");
 		}
 		System.out.println();
 	}
 
-	public static Node commonAncestor(Node root, Node p1, Node p2) {
+	public static TreeNode commonAncestor(TreeNode root, TreeNode p1, TreeNode p2) {
 		System.out.println(+p1.data + "---" + p2.data);
 
-		ArrayList<Node> parents1 = new ArrayList<Node>();
-		ArrayList<Node> parents2 = new ArrayList<Node>();
+		ArrayList<TreeNode> parents1 = new ArrayList<TreeNode>();
+		ArrayList<TreeNode> parents2 = new ArrayList<TreeNode>();
 
-		Node parent1 = p1.parent;
+		TreeNode parent1 = p1.parent;
 		while (parent1 != null) {
 			parents1.add(parent1);
 			parent1 = parent1.parent;
 		}
 
-		Node parent2 = p2.parent;
+		TreeNode parent2 = p2.parent;
 		while (parent2 != null) {
 			parents2.add(parent2);
 			parent2 = parent2.parent;
@@ -37,12 +37,12 @@ public class LCABinaryTree {
 		System.out.println(parents1.get(0).data);
 		printarray(parents2);
 
-//		for (Node par1 : parents1) {
-//			for (Node par2 : parents2) {
+//		for (TreeNode par1 : parents1) {
+//			for (TreeNode par2 : parents2) {
 //				if (par1 == par2) return par2;
 //			}
 //		}
-		Node lastmatched = null;
+		TreeNode lastmatched = null;
 		for(int i=0;i<parents1.size()&&i<parents2.size();i++)
 		{
 			if(parents1.get(i)==parents2.get(i))
@@ -59,27 +59,27 @@ public class LCABinaryTree {
 	}
 
 	public static void main(String args[]) {
-		Node root = new Node(12);
-		Node l1 = new Node(33);
-		Node r1 = new Node(44);
+		TreeNode root = new TreeNode(12);
+		TreeNode l1 = new TreeNode(33);
+		TreeNode r1 = new TreeNode(44);
 
 		root.AddChildren(l1, r1);
-		Node l2 = new Node(3);
+		TreeNode l2 = new TreeNode(3);
 
 
 		l1.AddLeft(l2);
 		//l2.AddRight(r2);
 
 
-		Node r3 = new Node(1023);
-		Node r4 = new Node(4096);
+		TreeNode r3 = new TreeNode(1023);
+		TreeNode r4 = new TreeNode(4096);
 		r3.AddLeft(r4);
-		Node r2 = new Node(43);
+		TreeNode r2 = new TreeNode(43);
 
 		r1.AddLeft(r3);
 		r1.AddRight(r2);
 
-		Node common = commonAncestor(root, r2, r3);
+		TreeNode common = commonAncestor(root, r2, r3);
 		System.out.println(common.data);
 	}
 }

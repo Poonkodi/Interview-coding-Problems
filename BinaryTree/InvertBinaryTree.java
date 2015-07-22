@@ -3,11 +3,11 @@ package BinaryTree;
 
 public class InvertBinaryTree {
 	
-public static Node invertTree(Node root) 
+public static TreeNode invertTree(TreeNode root) 
 {
         if(root!=null)
         {
-        	Node temp = root.left;
+        	TreeNode temp = root.left;
         	root.left=root.right;
         	root.right=temp;
         	invertTree(root.left);
@@ -16,7 +16,7 @@ public static Node invertTree(Node root)
         return root;
     }
 
-public static void printInorder(Node root)
+public static void printInorder(TreeNode root)
 {
 	if(root==null)
 		return;
@@ -27,10 +27,10 @@ public static void printInorder(Node root)
 
 public static void main(String args[])
 {
-			Node B=new Node(12,
-					new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-					new Node(20, new Node(111), new Node(1234)));
-			Node C=new Node(20, new Node(111), new Node(1234));	
+			TreeNode B=new TreeNode(12,
+					new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+					new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+			TreeNode C=new TreeNode(20, new TreeNode(111), new TreeNode(1234));	
 	printInorder(invertTree(B));
 	printInorder(invertTree(C));
 

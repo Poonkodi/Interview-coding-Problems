@@ -6,16 +6,16 @@ import java.util.Deque;
  * Level order traversal of a binary tree
  */
 public class LevelOrderTraverse {
-	public static void levelOrder(Node root)
+	public static void levelOrder(TreeNode root)
 	{
-		Deque<Node> q=new ArrayDeque<Node>();
+		Deque<TreeNode> q=new ArrayDeque<TreeNode>();
 		if(root!=null)
 		{
 		q.add(root);
 		}
 		while(!q.isEmpty())
 		{
-			Node current=q.remove();
+			TreeNode current=q.remove();
 			System.out.println(current.data);
 			if(current.left!=null)
 			q.add(current.left);
@@ -26,10 +26,10 @@ public class LevelOrderTraverse {
 	
 	public static void main(String args[])
 	{
-		Node B=new Node(12,
-				new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-				new Node(20, new Node(111), new Node(1234)));
-		Node C=new Node(20, new Node(111), new Node(1234));		
+		TreeNode B=new TreeNode(12,
+				new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+		TreeNode C=new TreeNode(20, new TreeNode(111), new TreeNode(1234));		
 		levelOrder(B);
 		levelOrder(C);
 	}

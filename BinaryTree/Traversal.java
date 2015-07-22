@@ -8,7 +8,7 @@ public class Traversal {
 	 *  post-order: left, right, root
 	 */
 	 
-	public static void preorder(Node root)
+	public static void preorder(TreeNode root)
 	{
 		if(root!=null)
 		{
@@ -18,7 +18,7 @@ public class Traversal {
 		}
 	}
 	
-	public static void inorder(Node root)
+	public static void inorder(TreeNode root)
 	{
 		if(root!=null)
 		{
@@ -28,7 +28,7 @@ public class Traversal {
 		}
 	}
 	
-	public static void postorder(Node root)
+	public static void postorder(TreeNode root)
 	{
 		if(root!=null)
 		{
@@ -40,10 +40,10 @@ public class Traversal {
 	
 	public static void main(String args[])
 	{
-		Node B=new Node(12,
-				new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-				new Node(20, new Node(111), new Node(1234)));
-		Node C=new Node(20, new Node(111), new Node(1234));
+		TreeNode B=new TreeNode(12,
+				new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+		TreeNode C=new TreeNode(20, new TreeNode(111), new TreeNode(1234));
 		preorder(C);
 		System.out.println("----");
 		inorder(C);

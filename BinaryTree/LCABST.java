@@ -1,10 +1,10 @@
 package BinaryTree;
 
 public class LCABST {
-	private static Node findParent(Node root, Node p1,Node p2) {
+	private static TreeNode findParent(TreeNode root, TreeNode p1,TreeNode p2) {
 		if(p1.data<p2.data)
 		{
-			Node ancestor=p1.parent;
+			TreeNode ancestor=p1.parent;
 			while(ancestor!=null)
 			{
 			if(ancestor.data>p1.data&&ancestor.data<p2.data)
@@ -15,7 +15,7 @@ public class LCABST {
 		
 		return null;
 	}
-	public static void printInorder(Node root)
+	public static void printInorder(TreeNode root)
 	{
 		if(root!=null)
 		{
@@ -26,20 +26,20 @@ public class LCABST {
 	}
 	public static void main(String args[])
 	{
-		Node D=new Node(20);	
-		Node l1=new Node(11);
-		Node r1=new Node(1234);
-		Node l2=new Node(2);
-		Node r2=new Node(13);
+		TreeNode D=new TreeNode(20);	
+		TreeNode l1=new TreeNode(11);
+		TreeNode r1=new TreeNode(1234);
+		TreeNode l2=new TreeNode(2);
+		TreeNode r2=new TreeNode(13);
 		D.AddChildren(l1,r1);
 		l1.AddChildren(l2,r2);
 		
-		Node E=new Node(12,
-				new Node(11,new Node(9, new Node(8), new Node(342)),new Node(16)),
-				new Node(114, new Node(111), new Node(1234)));
-		Node F=new Node(8,new Node(3),new Node(10));
-		Node L=new Node(8,new Node(3,new Node(1),new Node(6)),
-				new Node(10,null,new Node(14,new Node(13),null)));
+		TreeNode E=new TreeNode(12,
+				new TreeNode(11,new TreeNode(9, new TreeNode(8), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(114, new TreeNode(111), new TreeNode(1234)));
+		TreeNode F=new TreeNode(8,new TreeNode(3),new TreeNode(10));
+		TreeNode L=new TreeNode(8,new TreeNode(3,new TreeNode(1),new TreeNode(6)),
+				new TreeNode(10,null,new TreeNode(14,new TreeNode(13),null)));
 		printInorder(D);
 		System.out.println("  "+findParent(D,l2,r2).data);
 

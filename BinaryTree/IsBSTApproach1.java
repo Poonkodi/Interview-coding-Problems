@@ -6,7 +6,7 @@ public class IsBSTApproach1 {
 	 * Check whether binary tree is a binary search tree
 	 */
 	
-	public static boolean isBinarySearchTree(Node root)
+	public static boolean isBinarySearchTree(TreeNode root)
 	{
 		if(root==null)
 		{
@@ -42,14 +42,14 @@ public class IsBSTApproach1 {
 
 	public static void main(String args[])
 	{
-		Node B=new Node(12,
-				new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-				new Node(20, new Node(111), new Node(1234)));
-		Node C=new Node(20, new Node(111), new Node(1234));	
-		Node D=new Node(20, new Node(11), new Node(1234));	
-		Node E=new Node(12,
-				new Node(11,new Node(9, new Node(8), new Node(342)),new Node(16)),
-				new Node(114, new Node(111), new Node(1234)));
+		TreeNode B=new TreeNode(12,
+				new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+		TreeNode C=new TreeNode(20, new TreeNode(111), new TreeNode(1234));	
+		TreeNode D=new TreeNode(20, new TreeNode(11), new TreeNode(1234));	
+		TreeNode E=new TreeNode(12,
+				new TreeNode(11,new TreeNode(9, new TreeNode(8), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(114, new TreeNode(111), new TreeNode(1234)));
 
 		System.out.println(isBinarySearchTree(B));
 		System.out.println(isBinarySearchTree(C));

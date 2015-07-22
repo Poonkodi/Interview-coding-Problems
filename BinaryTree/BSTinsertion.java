@@ -4,37 +4,37 @@ package BinaryTree;
 public class BSTinsertion {
 
 	/*
-	 * Insert node to a binary search tree
+	 * Insert TreeNode to a binary search tree
 	 */
-	public static Node insertNode(Node root,int element)
+	public static TreeNode insertTreeNode(TreeNode root,int element)
 	{
 		if(root!=null)
 		{
-			if(element<root.data)
+			if(element<root.val)
 			{
 				//System.out.println("root.left="+root.left.data+","+element);
-				root.left= insertNode(root.left,element);
+				root.left= insertTreeNode(root.left,element);
 			}
-			else if(element>root.data)
+			else if(element>root.val)
 			{
 				//System.out.println("root.right="+root.right.data+","+element);
-				root.right=insertNode(root.right,element);
+				root.right=insertTreeNode(root.right,element);
 			}
 		}
 		else
 		{
-			return new Node(element);
+			return new TreeNode(element);
 		}
 		return root;
 
 	}
 
-	public static void printInorder(Node root)
+	public static void printInorder(TreeNode root)
 	{
 		if(root!=null)
 		{
 			printInorder(root.left);
-			System.out.print(root.data+"--");
+			System.out.print(root.val+"--");
 			printInorder(root.right);
 		}
 
@@ -43,15 +43,15 @@ public class BSTinsertion {
 
 	public static void main(String args[])
 	{
-		Node D=new Node(20, new Node(11), new Node(1234));	
-		Node E=new Node(12,
-				new Node(11,new Node(9, new Node(8), new Node(342)),new Node(16)),
-				new Node(114, new Node(111), new Node(1234)));
-		Node F=new Node(8,new Node(3),new Node(10));
-		Node L=new Node(8,new Node(3,new Node(1),new Node(6)),new Node(10,null,new Node(14,new Node(13),null)));
+		TreeNode D=new TreeNode(20, new TreeNode(11), new TreeNode(1234));	
+		TreeNode E=new TreeNode(12,
+				new TreeNode(11,new TreeNode(9, new TreeNode(8), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(114, new TreeNode(111), new TreeNode(1234)));
+		TreeNode F=new TreeNode(8,new TreeNode(3),new TreeNode(10));
+		TreeNode L=new TreeNode(8,new TreeNode(3,new TreeNode(1),new TreeNode(6)),new TreeNode(10,null,new TreeNode(14,new TreeNode(13),null)));
 		printInorder(L);
 		System.out.println();
-		Node G=insertNode(L,15);
+		TreeNode G=insertTreeNode(L,15);
 		printInorder(G);
 
 

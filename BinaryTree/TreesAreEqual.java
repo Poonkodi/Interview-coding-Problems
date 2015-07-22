@@ -3,7 +3,7 @@ package BinaryTree;
 
 public class TreesAreEqual {
 
-	public static boolean isEqual(Node root1,Node root2)
+	public static boolean isEqual(TreeNode root1,TreeNode root2)
 	{
 		if(root1==null&&root2!=null)
 			return false;
@@ -20,14 +20,14 @@ public class TreesAreEqual {
 	}
 	public static void main(String args[])
 	{
-		Node B=new Node(12,
-				new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-				new Node(20, new Node(111), new Node(1234)));
-		Node C=new Node(20, new Node(111), new Node(1234));	
-		Node D=new Node(12,
-				new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-				new Node(20, new Node(111), new Node(1234)));
-		Node E=new Node(20, new Node(111), new Node(1234));	
+		TreeNode B=new TreeNode(12,
+				new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+		TreeNode C=new TreeNode(20, new TreeNode(111), new TreeNode(1234));	
+		TreeNode D=new TreeNode(12,
+				new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+		TreeNode E=new TreeNode(20, new TreeNode(111), new TreeNode(1234));	
 		
 		System.out.println(isEqual(B,C));		
 		System.out.println(isEqual(D,C));

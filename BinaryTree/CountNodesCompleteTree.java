@@ -2,23 +2,23 @@ package BinaryTree;
 
 public class CountNodesCompleteTree {
 
-	 public static int countNodes(Node root) {
+	 public static int countTreeNodes(TreeNode root) {
 		 if(root==null)
 			 return 0;
 		 else if(root.left==null&&root.right==null)
 	    	 return 1;
 	     else
-	    	 return 1+countNodes(root.left)+countNodes(root.right);
+	    	 return 1+countTreeNodes(root.left)+countTreeNodes(root.right);
 	    }
 
 	 public static void main(String args[])
 	 {
-	 Node B=new Node(12,
-				new Node(13,new Node(14, new Node(114), new Node(342)),new Node(16)),
-				new Node(20, new Node(111), new Node(1234)));
-		Node C=new Node(20, new Node(111), new Node(1234));	
-		System.out.println(+countNodes(B));
-		System.out.println(+countNodes(C));
+	 TreeNode B=new TreeNode(12,
+				new TreeNode(13,new TreeNode(14, new TreeNode(114), new TreeNode(342)),new TreeNode(16)),
+				new TreeNode(20, new TreeNode(111), new TreeNode(1234)));
+		TreeNode C=new TreeNode(20, new TreeNode(111), new TreeNode(1234));	
+		System.out.println(+countTreeNodes(B));
+		System.out.println(+countTreeNodes(C));
 
 		}
 }

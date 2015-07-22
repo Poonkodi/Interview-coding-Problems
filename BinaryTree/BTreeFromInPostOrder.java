@@ -1,5 +1,7 @@
 package BinaryTree;
-
+/*
+ * Leetcode -Accepted - Construct Binary Tree from post order and Inorder traversal
+ */
 public class BTreeFromInPostOrder {
 	public  TreeNode buildTree(int[] inorder, int[] postorder) {
 		if(inorder.length==0||postorder.length==0)

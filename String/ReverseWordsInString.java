@@ -13,10 +13,26 @@ Given s = "the sky is blue",
 return "blue is sky the".
  */
 public class ReverseWordsInString {
-
-	public void reverseWords(String s) {
-		StringTokenizer st=new StringTokenizer(s);
-		String arr[]=new String();
+	 public String reverseWords(String s) {
+	        if(s==null||s=="")
+	        return s;
+	        if(s==" ")
+	        return s;
+	      String arr1[]=s.split("\\s");
+	      StringBuilder sb=new StringBuilder();
+	      int j=0;
+	      for(int i=arr1.length-1;i>=0;i--)
+	      {
+	          sb.append(arr1[i].toString());
+	          sb.append(" ");
+	      }
+	      
+	      return sb.toString();
+	    }
+	   
+//	public void reverseWords(String s) {
+//		StringTokenizer st=new StringTokenizer(s);
+//		String arr[]=new String();
 
 //		List<String> l=new ArrayList<String>();
 //		int cnt=0;
@@ -29,13 +45,15 @@ public class ReverseWordsInString {
 //		Collections.reverse(l);
 		
 		
-
-	}
-
+//
+//	}
+//
 	public static void main(String args[])
 	{
 		ReverseWordsInString r=new ReverseWordsInString();
-		r.reverseWords("the sky is blue");
+		System.out.println(r.reverseWords("the sky is blue"));
+		System.out.println(r.reverseWords(""));
+
 	}
 
 }

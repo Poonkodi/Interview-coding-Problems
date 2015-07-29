@@ -3,7 +3,9 @@ package BinaryTree;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-
+/*
+ * Leetcode-solution -Accepted
+ */
 public class BTreeZigZagTraversal {
 	/**
 	 * Definition for a binary tree node.

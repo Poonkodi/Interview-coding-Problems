@@ -2,15 +2,7 @@ package BinaryTree;
 
 public class CountNodesCompleteTree {
 
-	 public static int countTreeNodes(TreeNode root) {
-		 if(root==null)
-			 return 0;
-		 else if(root.left==null&&root.right==null)
-	    	 return 1;
-	     else
-	    	 return 1+countTreeNodes(root.left)+countTreeNodes(root.right);
-	    }
-
+	
 	 public static void main(String args[])
 	 {
 	 TreeNode B=new TreeNode(12,
@@ -21,6 +13,11 @@ public class CountNodesCompleteTree {
 		System.out.println(+countTreeNodes(C));
 
 		}
+
+	private static int countTreeNodes(TreeNode b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
 
 

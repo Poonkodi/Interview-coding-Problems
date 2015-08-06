@@ -14,20 +14,21 @@ return "blue is sky the".
  */
 public class ReverseWordsInString {
 	 public String reverseWords(String s) {
-	        if(s==null||s=="")
-	        return s;
-	        if(s==" ")
-	        return s;
-	      String arr1[]=s.split("\\s");
-	      StringBuilder sb=new StringBuilder();
-	      int j=0;
-	      for(int i=arr1.length-1;i>=0;i--)
-	      {
-	          sb.append(arr1[i].toString());
-	          sb.append(" ");
-	      }
-	      
-	      return sb.toString();
+		 if(s==null||s.length()==0)
+		        return s;
+		       
+		      String arr1[]=s.split("\\s+");
+		      StringBuilder sb=new StringBuilder();
+		      int j=0;
+		      for(int i=arr1.length-1;i>=0;i--)
+		      {
+		          if(sb.length()>0)
+		            sb.append(" ");
+		         sb.append(arr1[i].toString().trim());
+
+		      }
+		      
+		      return sb.toString().trim();
 	    }
 	   
 //	public void reverseWords(String s) {
@@ -52,7 +53,9 @@ public class ReverseWordsInString {
 	{
 		ReverseWordsInString r=new ReverseWordsInString();
 		System.out.println(r.reverseWords("the sky is blue"));
-		System.out.println(r.reverseWords(""));
+		System.out.println(r.reverseWords("a  b"));
+		System.out.println(r.reverseWords("a b"));
+
 
 	}
 

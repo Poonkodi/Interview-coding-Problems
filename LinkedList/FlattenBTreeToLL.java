@@ -2,7 +2,6 @@ package LinkedList;
 
 import java.util.LinkedList;
 
-import BinaryTree.Node;
 
 public class FlattenBTreeToLL {
 	static ListNode head=null;

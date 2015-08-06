@@ -9,6 +9,12 @@ public class ListNode {
 		this.val=val;
 		this.next=next;
 	}
+
+	
+	ListNode(int data)
+	{
+		this.val=data;
+	}
 	
 	
 }
